@@ -36,7 +36,7 @@ function calcXpFill(xp, level) {
    *   l4    |    [7001 - 8000]   |    (xp - 7000)/10
    *   l5    |    [8001 - 9000]   |    (xp - 8000)/10
    *   l6    |    [9001 - 10000]  |    (xp - 9000)/10
-   *   l7+   |    [>= 10001]      |    100
+   *   l7+   |    [>= 10001]      |    XP < 11000 ? (XP - 10000)/10 : 1000
    *
    * Note: this expression calculates the fill percentage of th XP Bar based on the current
    * XP and the corresponding level range
@@ -57,7 +57,7 @@ function calcXpFill(xp, level) {
     case 6:
       return (xp - 9000)/10;
     case 7:
-      return 100;
+      return xp < 11000 ? (xp - 10000)/10 : 100;
     default:
       return 0;
   }
