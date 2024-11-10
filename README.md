@@ -1,5 +1,9 @@
 # Classificador de Nível de Heroi
 
+## Links para visualizar a aplicação
+https://dio-classificador-nivel-de-heroi.vercel.app/</br>
+https://dio-classificador-nivel-de-heroi.netlify.app/
+
 Uma aplicação interativa para calcular e visualizar o nível de um herói com base em sua experiência (XP). O usuário consegue aumentar o XP do herói pressionando o botão de ganho de XP, o visual do card do heroi e a música mudam de acordo com a pontuação. Isso faz uma pequena referência ao meme "Mr Incredible becoming Canny".
 
 ## Funcionalidades
