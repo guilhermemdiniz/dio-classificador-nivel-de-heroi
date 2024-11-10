@@ -1,0 +1,41 @@
+
+.indicator-container {
+  background-color: rgb(36, 53, 107);
+  box-shadow: inset -4px 4px 12px rgba(0, 0, 0, 0.6);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  width: 24px;
+  height: 300px;
+  border: 4px solid #ffffff;
+  border-radius: 8px;
+  padding: 1px;
+}
+
+.xp-fill {
+  background: linear-gradient(to top, yellow, red, red);
+  height: 300px;
+  width: 100%;
+  border-radius: 2px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .indicator-container {
+    display: block;
+  }
+
+  .indicator-container {
+    height: 24px;
+    width: 300px;
+  }
+
+  .xp-fill {
+    background: linear-gradient(to right, yellow, red, red);
+    height: 100%;
+    width: 300px;
+  }
+}

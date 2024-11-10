@@ -1,0 +1,129 @@
+
+@keyframes shake { 
+  0% { transform: translate(0, 0); } 
+  25% { transform: translate(-1px, 2px); } 
+  50% { transform: translate(2px, 1px); } 
+  75% { transform: translate(-2px, -1px); } 
+  100% { transform: translate(0); } 
+} 
+
+.shake { 
+  animation: shake 0.2s cubic-bezier(.36,.07,.19,.97) both infinite; 
+}
+
+.main {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 160px;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to right, rgb(59, 158, 216), rgb(158, 225, 245));
+  position: relative;
+}
+
+.bg-immortal {
+  background: white;
+}
+
+.bg-radiant {
+  background: linear-gradient(to right, rgb(21, 14, 37), rgb(7, 0, 22));
+}
+
+.card-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.audio-option {
+  border: none;
+  height: 52px;
+  width: 52px;
+  margin-right: 24px;
+  background-color: rgb(255, 183, 27);
+  border-radius: 8px;
+  border-bottom: 4px solid rgb(224, 60, 0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(224, 60, 0);
+}
+
+.press-button {
+  padding: 16px 38px;
+  border: none;
+  border-bottom: 8px solid #14005c;
+  border-radius: 12px;
+  background-color: #2400a8;
+  color: white;
+  font-size: 24px;
+  font-weight: 600;
+  margin-right: 24px;
+}
+
+.press-button:active {
+  border: none;
+  background-color: #280f83;
+  animation: shake 0.1s cubic-bezier(.36,.07,.19,.97) both infinite; 
+}
+
+.restart {
+  height: 50px;
+  width: 50px;
+  border: none;
+  border-radius: 50%;
+  border-bottom: 4px solid green;
+  background-color: greenyellow;
+  color: green;
+}
+
+.restart:active, .audio-option:active {
+  border: none;
+}
+
+.xp-text {
+  color: white;
+  font-size: 32px;
+  text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.5);
+  font-weight: bold;
+  font-style: italic;
+  min-width: 200px;
+  margin-bottom: 4px;
+  font-style: italic;
+}
+
+.loading-screen {
+  height: 100vh;
+  background-color: #386fd4;
+}
+
+.loading-screen p {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 24px;
+  font-weight: 600;
+  color: white;
+}
+
+@media screen and (max-width: 768px) {
+  .main {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 24px;
+  }
+
+  .card-section {
+    display: block;
+  }
+}
